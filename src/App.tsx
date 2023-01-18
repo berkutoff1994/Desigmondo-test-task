@@ -1,9 +1,12 @@
 import React from 'react';
+import Main from './components/Main';
 
 function App() {
   return (
     <div className="App">
-      Приложение работает
+      <div className='container'>
+        <Main />
+      </div>
     </div>
   );
 }

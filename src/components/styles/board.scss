@@ -1,0 +1,17 @@
+@import '../../index.scss';
+
+.board {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+  margin: 40px 0;
+  padding: 30px;
+  background: $white;
+
+  .board__text-field {
+    height: 100%;
+    border: none;
+    outline: none;
+  }
+}

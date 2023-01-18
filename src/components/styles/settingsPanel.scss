@@ -1,0 +1,202 @@
+@import '../../index.scss';
+
+.settings-wrapper {
+  max-width: 240px;
+  width: 100%;
+  height: 100vh;
+  padding: 17px 15px;
+  margin-left: 300px;
+  background: $white;
+
+  .panel__title {
+    margin-bottom: 10px;
+    font-family: 'Fira Sans';
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 13px;
+    color: $gray;
+  }
+
+  .form {
+
+    .input {
+      width: 100%;
+      max-height: 40px;
+      height: 100%;
+      padding: 14px;
+      outline: none;
+      background: none;
+      border: 1px solid #E8ECF0;
+      @include size-12;
+    }
+
+    select {
+      @include size-12;
+      font-family: 'Fira Sans';
+    }
+
+    .form-item {
+      margin-bottom: 10px;
+    }
+
+    .form__options-block {
+      display: flex;
+      position: relative;
+      margin-bottom: 10px;
+
+      .form__weight-block {
+        max-width: 65%;
+        width: 100%;
+
+        select {
+          border-radius: 4px 0 0 4px;
+          border-right: none;
+        }
+      }
+
+      .form__size-block {
+        position: relative;
+        max-width: 35%;
+        width: 100%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 24%;
+          left: 10px;
+          width: 16px;
+          height: 16px;
+          background-image: url('../../img/Font-Size.png');
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .form__options-block--size {
+          padding-left: 35px;
+          padding-right: 5px;
+          border-radius: 0 4px 4px 0;
+        }
+      }
+      
+    }
+
+    .form__color-block {
+      position: relative;
+
+      .color-example {
+        position: absolute;
+        top: 25%;
+        left: 12px;
+        width: 18px;
+        height: 18px;
+        border-radius: 3px;
+      }
+    }
+
+    .form__options-block--lh, .form__options-block--ls {
+      position: relative;
+      max-width: 50%;
+      width: 100%;
+
+      input {
+        padding-left: 37px;
+        padding-right: 25px;
+      }
+    }
+
+    .form__options-block--lh {
+
+      input {
+        border-radius: 4px 0 0 4px;
+        border-right: none;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 24%;
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../img/Line-Height.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      &:after {
+        content: "%";
+        position: absolute;
+        top: 24%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        color: $gray;
+      }
+    }
+
+    .form__options-block--ls { 
+      input {
+        border-radius: 0 4px 4px 0;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        top: 24%;
+        left: 10px;
+        width: 16px;
+        height: 16px;
+        background-image: url('../../img/Letter-Spacing.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      
+      &:after {
+        content: "px";
+        position: absolute;
+        top: 24%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        color: $gray;
+      }
+    }
+
+    .form__direction-block {
+      display: flex;
+      border: 1px solid #E8ECF0;
+      border-radius: 4px;
+
+      button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 25%;
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: none;
+        outline: none;
+
+        &:not(:last-child) {
+          border-right: 1px solid #E8ECF0;
+        }
+
+        .span-block {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+
+    .form__submit-button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      background-color: $green;
+      border-radius: 4px;
+      color: $white;
+    }
+  }
+}
