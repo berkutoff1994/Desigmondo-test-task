@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
-import { defaultSetup } from '../types/variables';
+import { defaultSetup } from '../data/variables';
 import Board from './Board';
 import SettingsPanel from './SettingsPanel';
 import './styles/main.scss'

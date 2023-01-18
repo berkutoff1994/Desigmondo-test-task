@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react'
 import MyDirectionButton from '../ui/MyDirectionButton'
 import MySelect from '../ui/MySelect'
-import {fontsOptions, weightsOptions, colorOptions, directionButtonList} from '../types/variables'
+import {fontsOptions, weightsOptions, colorOptions, directionButtonList} from '../data/variables'
 import './styles/settingsPanel.scss'
 import { ISetup } from '../types'
 import { useDispatch } from 'react-redux'
