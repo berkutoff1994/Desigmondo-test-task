@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
 import { RootState } from '../store';
 import { defaultSetup } from '../data/variables';
@@ -9,12 +9,13 @@ import './styles/main.scss'
 const Main = () => {  
   const [setup, setSetup] = useState(null)
   const storeSetup = useSelector((state: RootState) => state.changeSetup)
-  console.log(storeSetup)
+
   useEffect(() => {
     const lsSetup = localStorage.getItem('params')
     const params = typeof lsSetup === 'string' ? JSON.parse(lsSetup) : defaultSetup;
     setSetup(params)
   }, [])
+  
   if(setup === null) {
     return (
       <div className='loader'>

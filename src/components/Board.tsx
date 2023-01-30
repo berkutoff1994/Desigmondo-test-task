@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import { FC } from 'react'
 import type { Property } from 'csstype'
 import { ISetup } from '../types'
 import './styles/board.scss'
